@@ -7,7 +7,9 @@
 	</insert>
 
 	<select id="findAll" resultType="site.metacoding.testproject.domain.user.User">
-		SELECT * FROM USER;
+		SELECT id , row_number() over(order BY id desc) as NO,
+		NAME, job, createdAt
+		from user
 	</select>
 
 	<select id="findById" resultType="site.metacoding.testproject.domain.user.User">

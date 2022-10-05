@@ -12,4 +12,6 @@ public class User {
     private String name;
     private String job;
     private Timestamp createdAt;
+
+    private String no;
 }
